@@ -1,4 +1,4 @@
-# Financial News Sentiment Analysis
+# Financial News Sentiment Classification
 
 A natural-language processing project that classifies financial news sentences as **negative**, **neutral**, or **positive**.
 
