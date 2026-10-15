@@ -32,6 +32,18 @@ The notebook is saved with its original outputs and explains how to upload the s
 
 [Explore the analysis →](python/colon-cancer-classification/)
 
+## Machine Learning Model Comparison
+
+A substantial lab comparing linear and logistic regression, Ridge, Lasso, Random Forest, and XGBoost with cross-validation, ROC/AUC, threshold tuning, and model-selection discussion.
+
+[Explore the machine-learning lab →](python/machine-learning-model-comparison/)
+
+## Air Pollution Data Cleaning in R
+
+Cleaning and summarizing **18,980 air-monitoring records** from seven Chinese cities. The script handles missing values, invalid pressure placeholders, city-level PM2.5 summaries, and time-based filtering.
+
+[Explore the R analysis →](r/pollution-analysis/)
+
 ## Library Database — SQL Design Sample
 
 A **ten-table schema** covering books, copies, members, and borrowings. Demonstrates primary keys, foreign keys, and many-to-many relationships; includes no sample records or analysis queries.
@@ -50,6 +62,9 @@ A **ten-table schema** covering books, copies, members, and borrowings. Demonstr
 
 ## Additional NLP study
 
-Financial News Sentiment Analysis compares TF-IDF models, a bidirectional LSTM, and FinBERT. It is clearly labeled as source-data-dependent because the original course CSV is not included in the repository.
+Financial News Sentiment Analysis compares TF-IDF models, a bidirectional LSTM, and FinBERT using an included 5,842-row financial-news dataset. The README records the saved weighted F1 results and the limits of a single test split.
 
 [Explore the NLP study →](python/financial-sentiment-analysis/)
+
+
+The financial sentiment project includes its cleaned dataset and saved model-comparison results.

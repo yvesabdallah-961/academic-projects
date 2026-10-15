@@ -1,29 +1,45 @@
 # Financial News Sentiment Analysis
 
-An NLP study project for classifying financial news sentences by sentiment.
+A natural-language processing project that classifies financial news sentences as **negative**, **neutral**, or **positive**.
 
-## What it covers
+## What it demonstrates
 
-- Text cleaning, tokenization, stopword removal, and lemmatization
+- Text cleaning, stopword removal, and lemmatization
 - TF-IDF features with word bigrams
-- Classical models: Logistic Regression, SVM, Naive Bayes, and Random Forest
-- A bidirectional LSTM with an example of early stopping to reduce overfitting
-- A FinBERT transformer baseline for finance-specific language
-- A final model-comparison section based on weighted F1 score
+- Logistic Regression, SVM, Naive Bayes, and Random Forest baselines
+- Bi-LSTM training with an explicit overfitting comparison
+- Zero-shot FinBERT evaluation
+- Confusion matrices and weighted F1 comparison
+
+## Dataset
+
+The included `financial-news-sentiment.csv` contains 5,842 labeled sentences:
+
+- Neutral: 3,130
+- Positive: 1,852
+- Negative: 860
+
+The classes are imbalanced, so weighted and per-class F1 scores are more informative than accuracy alone.
+
+## Saved results
+
+On the saved 15% test split (877 sentences), the recorded weighted F1 scores were approximately:
+
+| Model | Weighted F1 |
+|---|---:|
+| Logistic Regression | 0.69 |
+| SVM | 0.68 |
+| Naive Bayes | 0.63 |
+| Random Forest | 0.65 |
+| Bi-LSTM with early stopping | 0.62 |
+| FinBERT zero-shot | 0.75 |
+
+These results are from one reproducible split and are included to show the workflow, not to promise production performance.
 
 ## Difficulty
 
-Advanced student work. The project combines NLP preprocessing, several machine-learning baselines, neural-network training, and a transformer model. The main challenge is making the models comparable while keeping the text pipeline and evaluation consistent.
+Advanced student project. The hardest parts are handling imbalanced labels, keeping the train/test split consistent across models, and comparing a fast classical baseline with deep learning and a finance-specific transformer.
 
-## Data and reproduction
+## Run it
 
-The original course dataset is not included in this repository. To run the notebook, provide a CSV named `data.csv` or `archive/data.csv` with these columns:
-
-- `Sentence`: the financial news text
-- `Sentiment`: the target label
-
-The notebook also offers a Colab upload prompt when the file is not found. It clears old runtime output so results are generated from the dataset you provide.
-
-## Portfolio note
-
-This is a reproducible study notebook and a good demonstration of NLP workflow design. Reported scores should be generated from the supplied dataset rather than assumed in advance; the notebook therefore does not present unverified performance claims.
+Open `financial-sentiment-analysis.ipynb` in Jupyter or Google Colab. The notebook expects `financial-news-sentiment.csv` in the same folder. Bi-LSTM and FinBERT sections require TensorFlow and Transformers and may need a GPU or extra setup.
