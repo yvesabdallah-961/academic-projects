@@ -1,51 +1,39 @@
 # Country Development Clustering
 
-[Open the notebook](country-clustering.ipynb).
+[Notebook](country-clustering.ipynb)
 
-This analysis groups countries using eight World Bank indicators: birth rate, fertility, literacy, female secondary enrollment, GDP per capita, life expectancy, internet usage, and urban population.
+Which countries have similar demographic, economic, and social profiles? This analysis compares eight World Bank indicators: birth rate, fertility, literacy, female secondary enrollment, GDP per capita, life expectancy, internet usage, and urban population.
 
-The workflow fetches the latest available observations within 2010–2023, filters countries with fewer than six available indicators, imputes missing values with medians, standardizes the features, and compares K-means with Ward hierarchical clustering. PCA provides a two-dimensional view.
+## Method
 
-![Country clusters from the executed notebook](country-clusters.png)
+Use the latest observations available within 2010–2023, retain countries with at least six indicators, and fill remaining gaps with medians. Standardize the features so different units are comparable, then apply K-means and Ward hierarchical clustering.
 
-## Results and interpretation
+![Country clusters](country-clusters.png)
 
-The verified run used 211 countries after filtering. With four clusters, the silhouette scores were 0.272 for K-means and 0.240 for hierarchical clustering. Two clusters scored higher in the tested range, so the four-group solution is an exploratory choice for more detailed profiles, not an optimal or definitive classification.
-
-Observation years differ between indicators and countries. Missing-data imputation and the choice of features affect the groups. The World Bank may revise historical data, so later API runs can differ slightly.
-
-## Optional: reproduce the analysis
-
-Install the packages in [requirements.txt](../requirements.txt) and run all cells in order. Internet access is required. All 30 code cells were rerun successfully when this version was checked.
-
-Data source: [World Bank Indicators API](https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json&date=2010:2023&per_page=20000).
+Each point is a country. PCA compresses the eight indicators into two axes; colors show the K-means groups.
 
 ![Wealth, health, and demographic relationships](country-wealth-health.png)
 
-## What this means in everyday terms
+These plots explore relationships between individual indicators before interpreting the groups.
 
-The question is: which countries look similar when we compare several development indicators at once? A country can have a high income but a different demographic profile from another high-income country. Looking at several measures together helps reveal those differences.
+## Results and main challenge
 
-### How the analysis works
+The analysis retains **211 countries**. With four groups, silhouette scores are **0.272 for K-means** and **0.240 for hierarchical clustering**; higher scores indicate better separation.
 
-1. **Collect the data.** The notebook requests each indicator from the World Bank and joins the results using country codes.
-2. **Deal with gaps.** Countries with too little information are removed. Remaining missing values are filled with the median for that indicator. This keeps more countries in the analysis, but those filled values are estimates.
-3. **Make the measures comparable.** GDP is measured in dollars while other indicators use percentages, years, or rates. Standardization prevents the larger numerical scale of GDP from dominating the distance calculations.
-4. **Create groups in two ways.** K-means places countries around group centers. Hierarchical clustering gradually joins similar countries into a tree of groups.
-5. **Check the grouping.** The silhouette score measures how well separated the groups are. PCA compresses the eight indicators into two axes for a chart; the chart is a simplified view.
+Choosing the group count is the main challenge: two groups score higher, while four show more detailed profiles. Four is therefore an exploratory choice, not a definitive classification.
 
-### Why choosing the number of groups is difficult
+![Comparison of cluster counts](cluster-count-comparison.png)
 
-**Difficulty: intermediate student project.** The main challenge is making sensible choices about missing data, scaling, and the number of groups. There is no correct label to compare against, as there would be in a supervised prediction problem. Four groups make the profiles more detailed, but the score chart below shows stronger separation with two. That trade-off needs to be acknowledged when interpreting the result.
-
-![K-means comparison across different cluster counts](cluster-count-comparison.png)
-
-**How to read this chart:** the left panel shows within-group variation, which usually falls as more groups are added. The right panel shows separation quality; higher silhouette values are better. The two panels answer different questions, so a lower curve on the left alone does not prove that a choice is better.
+Left: within-group variation falls as groups are added. Right: silhouette scores help compare separation.
 
 ![Hierarchical clustering tree](hierarchical-tree.png)
 
-**How to read this chart:** branches join groups of countries. Taller joins indicate larger differences between the groups being merged. This truncated view shows the broad structure without displaying every country label.
+Taller joins indicate larger differences between merged groups. The tree is shortened for readability.
 
-### What the project demonstrates
+## Limits
 
-API data collection, joining tables, missing-value handling, feature scaling, exploratory charts, and comparison of two unsupervised methods. The result is a descriptive analysis; it does not establish causes or rank countries by overall quality of life.
+Observation years vary, and filling missing values affects the groups. This describes patterns, not causes or a ranking of countries. World Bank revisions can change later results.
+
+**Source:** [World Bank Indicators API](https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json&date=2010:2023&per_page=20000).
+
+**To reproduce:** install [requirements.txt](../requirements.txt) and run the notebook in order with internet access.
