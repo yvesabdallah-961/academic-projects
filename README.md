@@ -1,6 +1,6 @@
 # Yves Abdallah — Data Projects
 
-Selected Python and SQL projects from my studies in Big Data, Artificial Intelligence, and Management at Centrale Nantes and Audencia.
+Selected Python, R, and SQL projects from my studies in Big Data, Artificial Intelligence, and Management at Centrale Nantes and Audencia.
 
 ## Country Development Clustering
 
@@ -52,19 +52,16 @@ A **ten-table schema** covering books, copies, members, and borrowings. Demonstr
 
 [Explore the schema →](sql/)
 
-## Course report
+## Practical Sessions Report
 
 [Read the written practical-sessions report →](reports/practical-sessions-report.pdf)
 
-## Visual guide
+## Project Screenshots
 
 [Open the screenshot and visual-results guide →](screenshots/)
 
-## Additional NLP study
+## Financial News Sentiment Analysis
 
 Financial News Sentiment Analysis compares TF-IDF models, a bidirectional LSTM, and FinBERT using an included 5,842-row financial-news dataset. The README records the saved weighted F1 results and the limits of a single test split.
 
 [Explore the NLP study →](python/financial-sentiment-analysis/)
-
-
-The financial sentiment project includes its cleaned dataset and saved model-comparison results.
