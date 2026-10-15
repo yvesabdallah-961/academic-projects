@@ -1,56 +1,44 @@
 # PCA and Handwritten Digit Recognition
 
-[Open the notebook](pca-and-digit-recognition.ipynb).
+[Notebook](pca-and-digit-recognition.ipynb)
 
-This project compares a five-neighbor k-NN classifier using 64 pixel features with the same classifier after principal component analysis. It uses scikit-learn's built-in handwritten-digits dataset and a stratified 75% training / 25% test split with a fixed random seed. Scaling and model PCA are fitted on training data only.
-
-![Accuracy and dimensionality comparison](digits-pca-comparison.png)
-
-| Model | Features | Test accuracy |
-| --- | ---: | ---: |
-| k-NN with original features | 64 | 96.44% |
-| k-NN after PCA | 31 | 96.22% |
-
-The reduced representation retained about 90.25% of the training variance. These figures describe one held-out split of this dataset; they are not a general performance guarantee.
-
-The notebook includes class distributions, confusion matrices, explained-variance plots, reconstructed digit images, and a two-dimensional PCA visualization. It was extracted from the digit-recognition portion of a larger PCA analysis so it runs independently without the missing decathlon CSV.
-
-## Optional: reproduce the analysis
-
-Install the packages in [requirements.txt](../requirements.txt) and run the notebook from top to bottom. No external CSV is needed. All 18 code cells were rerun successfully when this version was checked.
-
-## What this means in everyday terms
-
-Each digit image is a small grid of 64 pixels. The classifier predicts a digit by finding similar examples in the training data. The question is whether we can describe those images with fewer numbers and still recognize them almost as accurately.
+Can digit images be represented with fewer features while keeping similar classification accuracy?
 
 ![Examples of handwritten digits](digit-examples.png)
 
-**What you are looking at:** examples of the ten digit classes. The images are only 8 × 8 pixels, so some shapes are ambiguous even before a model is involved.
+The scikit-learn digits dataset contains 8 × 8 pixel images, giving 64 features per image.
 
-### How the analysis works
+## Method and main challenge
 
-1. **Hold back test examples.** A quarter of the images are reserved for evaluation. The model does not train on them.
-2. **Scale the pixel features.** Scaling is learned from the training set, then applied to the test set.
-3. **Build a baseline.** A five-neighbor classifier uses all 64 features.
-4. **Compress the features with PCA.** PCA finds combinations of pixels that preserve much of the variation in the training images. Here it keeps enough components to retain at least 90% of that variation.
-5. **Compare the models fairly.** The reduced-feature classifier is evaluated on the same test images as the baseline.
+Compare a five-neighbor classifier before and after PCA, using a fixed, stratified 75% training / 25% test split. PCA keeps enough components to retain at least 90% of the training variance.
 
-![Explained variance and number of PCA components](pca-variance.png)
+The challenge is a fair comparison: both models use the same test images, and scaling and PCA are fitted only on training data. This prevents test information from influencing training.
 
-**How to read this chart:** the left panel shows the contribution of each component. The right panel adds those contributions together. The 90% threshold is reached with 31 components in this run. Variance measures how much information about differences between images is retained; it is not the same thing as classification accuracy.
+## Results
 
-![Confusion matrix for classification after PCA](digit-confusion-matrix.png)
+![Accuracy and feature-count comparison](digits-pca-comparison.png)
 
-**How to read this chart:** rows are the true digits and columns are the predictions. Counts on the diagonal are correct predictions; off-diagonal counts show which digits the model confuses.
+| Model | Features | Test accuracy |
+| --- | ---: | ---: |
+| k-NN | 64 | 96.44% |
+| k-NN after PCA | 31 | 96.22% |
 
-![Images reconstructed from the reduced PCA representation](digit-reconstruction.png)
+The accuracy chart uses a zoomed scale. PCA roughly halves the feature count with a small accuracy change on this split.
 
-**What this shows:** the bottom row reconstructs the standardized images from the compressed representation. Some fine detail is lost, while much of each digit's overall structure remains.
+![PCA explained variance](pca-variance.png)
 
-### What makes this challenging
+The 31 components retain **90.25% of training variance**. The right panel adds each component's contribution; retained variance is different from prediction accuracy.
 
-**Difficulty: intermediate student project.** The important part is a fair comparison: the same data split and classifier must be used, and preprocessing must be fitted only on training data. Another challenge is explaining why keeping 90% of the variance does not guarantee 90% accuracy. The final accuracy change here is small, but one split is not enough to claim that the methods always perform equally.
+![Confusion matrix after PCA](digit-confusion-matrix.png)
 
-### What the project demonstrates
+Rows show actual digits and columns show predictions. Diagonal counts are correct; other cells show mistakes.
 
-A reproducible train/test evaluation, preprocessing without test-data leakage, dimensionality reduction, classification, and interpretation of results. The comparison focuses on accuracy and feature count; it makes no claim about end-to-end speed.
+![Digits reconstructed from PCA](digit-reconstruction.png)
+
+The bottom row reconstructs standardized images from the compressed representation. Overall shapes remain, but some detail is lost.
+
+## Limits
+
+These results cover one split of a small dataset. They do not establish equal performance on other splits or real-world handwriting.
+
+**To reproduce:** install [requirements.txt](../requirements.txt) and run the notebook in order. The dataset is built into scikit-learn.
