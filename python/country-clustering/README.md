@@ -14,9 +14,9 @@ The verified run used 211 countries after filtering. With four clusters, the sil
 
 Observation years differ between indicators and countries. Missing-data imputation and the choice of features affect the groups. The World Bank may revise historical data, so later API runs can differ slightly.
 
-## Run
+## Optional: reproduce the analysis
 
-Install the packages in [requirements.txt](../requirements.txt) and run all cells in order. Internet access is required. All 30 code cells were rerun successfully during preparation of this repository.
+Install the packages in [requirements.txt](../requirements.txt) and run all cells in order. Internet access is required. All 30 code cells were rerun successfully when this version was checked.
 
 Data source: [World Bank Indicators API](https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json&date=2010:2023&per_page=20000).
 
