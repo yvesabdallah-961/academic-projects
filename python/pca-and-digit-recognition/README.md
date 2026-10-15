@@ -15,9 +15,9 @@ The reduced representation retained about 90.25% of the training variance. These
 
 The notebook includes class distributions, confusion matrices, explained-variance plots, reconstructed digit images, and a two-dimensional PCA visualization. It was extracted from the digit-recognition portion of a larger PCA analysis so it runs independently without the missing decathlon CSV.
 
-## Run
+## Optional: reproduce the analysis
 
-Install the packages in [requirements.txt](../requirements.txt) and run the notebook from top to bottom. No external CSV is needed. All 18 code cells were rerun successfully during preparation of this repository.
+Install the packages in [requirements.txt](../requirements.txt) and run the notebook from top to bottom. No external CSV is needed. All 18 code cells were rerun successfully when this version was checked.
 
 ## What this means in everyday terms
 
