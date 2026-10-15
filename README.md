@@ -52,9 +52,9 @@ A **ten-table schema** covering books, copies, members, and borrowings. Demonstr
 
 [Open the SQL schema](sql/)
 
-## Practical Sessions Report
+## Machine Learning Course Report
 
-[Read the practical-sessions report](reports/practical-sessions-report.pdf)
+[Read the machine-learning course report](reports/machine-learning-course-report.pdf)
 
 ## Project Screenshots
 
