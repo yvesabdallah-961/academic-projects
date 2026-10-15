@@ -2,6 +2,12 @@
 
 Selected Python and SQL projects from my studies in Big Data, Artificial Intelligence, and Management at Centrale Nantes and Audencia.
 
+## Financial News Sentiment Analysis
+
+An NLP study notebook comparing TF-IDF models, a bidirectional LSTM, and FinBERT. It is clearly labeled as source-data-dependent because the original course CSV is not included in the repository.
+
+[Explore the NLP study →](python/financial-sentiment-analysis/)
+
 ## Country Development Clustering
 
 Grouping **211 countries** using eight World Bank indicators. Compares K-means and hierarchical clustering, with attention to missing data and the choice of group count.
