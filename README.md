@@ -2,11 +2,11 @@
 
 Selected projects in data science, artificial intelligence, and analytics from my hybrid Big Data, AI, and Management degree at Centrale Nantes and Audencia Business School.
 
-The portfolio includes practical work in Python, R, SQL, machine learning, natural language processing, dimensionality reduction, clustering, and data cleaning.
+The portfolio includes practical work in Python, R, machine learning, natural language processing, dimensionality reduction, clustering, and data cleaning.
 
 ## How to read this portfolio
 
-Each project link opens a short project page with the objective, data, methods, difficulty, results, limitations, and reproduction steps. The project folder also contains the notebook, script, SQL file, dataset, or charts used for the work.
+Each project link opens a short project page with the objective, data, methods, difficulty, results, limitations, and reproduction steps. The project folder also contains the notebook, script, dataset, or charts used for the work.
 
 ## Projects
 
@@ -51,14 +51,6 @@ Each project link opens a short project page with the objective, data, methods, 
 ![Colon cancer model comparison](python/colon-cancer-classification/model-comparison.png)
 
 [View the project page — classification workflow, evaluation charts, and notebook](python/colon-cancer-classification/)
-
-### 7. Library Database Schema
-
-<small><strong>SQL database-design sample.</strong> Defines ten related tables for books, copies, members, authors, keywords, and borrowings using primary and foreign keys.</small>
-
-![Library schema and table relationships](sql/library-schema-preview.png)
-
-[View the SQL page — schema file, relationship diagram, and usage notes](sql/)
 
 ## Supporting material
 
