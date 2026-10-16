@@ -1,60 +1,57 @@
 # Yves Abdallah — Data Science & AI Portfolio
 
-These are selected projects I completed while studying Big Data, AI, and Management at Centrale Nantes and Audencia Business School.
+Selected coursework projects from my dual-major studies in Big Data, AI, and Management at Centrale Nantes and Audencia Business School.
 
 [LinkedIn](https://www.linkedin.com/in/yves-abdallah/) · [GitHub profile](https://github.com/yvesabdallah-961)
 
-They show how I work with Python, R, SQL, machine learning, natural language processing, clustering, dimensionality reduction, and data cleaning.
+The projects show practical work with Python, R, SQL, machine learning, natural language processing, clustering, dimensionality reduction, and data cleaning.
 
-## How to read this portfolio
+## How to use this portfolio
 
-Each link opens a short project page that explains what I worked on, the data and methods, the main result or output, and the limits of the work. Project folders contain the notebooks, scripts, datasets, SQL schema, or charts.
+Each project page gives a short overview, explains the methods and results, and notes the main limitations. Open the linked notebook or script for the work itself.
 
-## Projects
+## Main projects
 
 ### 1. Financial News Sentiment Classification
 
-<small><strong>Advanced NLP project.</strong> I built models that label 5,842 financial-news sentences as negative, neutral, or positive, then compared simple text models with a Bi-LSTM and FinBERT.</small>
+<small><strong>NLP coursework project.</strong> I compared text-classification approaches on 5,842 labeled financial sentences, including TF-IDF models, a Bi-LSTM, and FinBERT.</small>
 
-[View the project page — methods, model scores, dataset, and notebook](python/financial-sentiment-analysis/)
+[Project page — dataset, methods, limitations, and notebook](python/financial-sentiment-analysis/)
 
-### 2. Machine Learning Model Comparison
+### 2. Country Development Clustering
 
-<small><strong>Advanced machine-learning lab.</strong> I compared several regression and classification models and looked at how validation, thresholds, and tuning change their results.</small>
+<small><strong>Real-data clustering project.</strong> I used eight World Bank indicators for 211 countries and compared K-means with hierarchical clustering.</small>
 
-[View the project page — models, evaluation methods, limits, and notebook](python/machine-learning-model-comparison/)
+![Country groups based on development indicators](python/country-clustering/country-clusters.png)
 
-### 3. Country Development Clustering
+[Project page — data source, method, results, and limitations](python/country-clustering/)
 
-<small><strong>Real-data clustering project.</strong> I used eight World Bank indicators to group 211 countries with K-means and hierarchical clustering, then interpreted the patterns.</small>
+### 3. PCA and Handwritten Digit Recognition
 
-![Countries grouped using eight development indicators](python/country-clustering/country-clusters.png)
+<small><strong>Dimensionality-reduction project.</strong> I tested whether 64 pixel features could be reduced to 31 while keeping similar recognition accuracy.</small>
 
-[View the project page — data source, clustering method, charts, and limitations](python/country-clustering/)
+![Accuracy comparison before and after PCA](python/pca-and-digit-recognition/digits-pca-comparison.png)
 
-### 4. PCA and Handwritten Digit Recognition
+[Project page — method, results, charts, and notebook](python/pca-and-digit-recognition/)
 
-<small><strong>Dimensionality-reduction project.</strong> I tested whether handwritten digits could use 31 features instead of 64 without losing much recognition accuracy.</small>
+### 4. Air Pollution Data Cleaning in R
 
-![Accuracy and feature-count comparison](python/pca-and-digit-recognition/digits-pca-comparison.png)
+<small><strong>R data-quality exercise.</strong> I cleaned 18,980 air-monitoring records from seven Chinese cities and summarized PM2.5 measurements.</small>
 
-[View the project page — PCA method, accuracy comparison, charts, and notebook](python/pca-and-digit-recognition/)
+[Project page — cleaning steps, data, script, and chart](r/pollution-analysis/)
 
-### 5. Air Pollution Data Cleaning in R
+### 5. Library Database Design
 
-<small><strong>R data-quality project.</strong> I cleaned and summarized 18,980 air-monitoring records from seven Chinese cities, including missing-value checks and PM2.5 analysis.</small>
+<small><strong>Introductory SQL exercise.</strong> I designed a PostgreSQL schema with ten related tables for a library. It is a small schema example and has no sample data or analysis queries.</small>
 
-[View the project page — cleaning steps, dataset, R script, and analysis](r/pollution-analysis/)
+![Library database relationships](screenshots/library-database-schema.png)
 
-### 6. Library Database Design
+[Project page — schema, diagram, and setup notes](sql/)
 
-<small><strong>Introductory SQL exercise.</strong> I designed a PostgreSQL schema with ten related tables for a library, including books, copies, members, and borrowings. This small sample does not include data or analysis queries.</small>
+## Additional coursework
 
-![Library database table relationships](screenshots/library-database-schema.png)
+- [Machine learning comparison lab](python/machine-learning-model-comparison/) — a course exercise using generated datasets to practice regression and classification. It has no saved execution outputs and uses the test split while choosing a threshold, so treat it as a learning exercise rather than a benchmark.
 
-[View the SQL project page — schema diagram, SQL file, and setup notes](sql/)
+## Visuals
 
-## Supporting material
-
-- [Read the machine-learning course report — detailed methodology and results](reports/machine-learning-course-report.pdf)
-- [Browse project screenshots — visual previews of the analyses](screenshots/)
+- [Project screenshots and charts](screenshots/) — visual examples from the country clustering, PCA, and SQL projects.
