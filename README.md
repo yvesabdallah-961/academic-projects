@@ -4,19 +4,23 @@ Selected projects in data science, artificial intelligence, and analytics from m
 
 The portfolio includes practical work in Python, R, SQL, machine learning, natural language processing, dimensionality reduction, clustering, and data cleaning.
 
+## How to read this portfolio
+
+Each project link opens a short project page with the objective, data, methods, difficulty, results, limitations, and reproduction steps. The project folder also contains the notebook, script, SQL file, dataset, or charts used for the work.
+
 ## Projects
 
 ### 1. Financial News Sentiment Classification
 
 <small><strong>Advanced NLP project.</strong> Classifies 5,842 financial-news sentences with TF-IDF models, a Bi-LSTM, and FinBERT. Includes model comparison and class-imbalance analysis.</small>
 
-[Open the project](python/financial-sentiment-analysis/)
+[View the project page — methods, model scores, dataset, and notebook](python/financial-sentiment-analysis/)
 
 ### 2. Machine Learning Model Comparison
 
 <small><strong>Advanced machine-learning lab.</strong> Compares regression, Random Forest, and XGBoost using cross-validation, ROC/AUC, threshold tuning, and hyperparameter search.</small>
 
-[Open the project](python/machine-learning-model-comparison/)
+[View the project page — models, evaluation methods, limits, and notebook](python/machine-learning-model-comparison/)
 
 ### 3. Country Development Clustering
 
@@ -24,7 +28,7 @@ The portfolio includes practical work in Python, R, SQL, machine learning, natur
 
 ![Countries grouped using eight development indicators](python/country-clustering/country-clusters.png)
 
-[Open the project](python/country-clustering/)
+[View the project page — data source, clustering method, charts, and limitations](python/country-clustering/)
 
 ### 4. PCA and Handwritten Digit Recognition
 
@@ -32,13 +36,13 @@ The portfolio includes practical work in Python, R, SQL, machine learning, natur
 
 ![Accuracy and feature-count comparison](python/pca-and-digit-recognition/digits-pca-comparison.png)
 
-[Open the project](python/pca-and-digit-recognition/)
+[View the project page — PCA method, accuracy comparison, charts, and notebook](python/pca-and-digit-recognition/)
 
 ### 5. Air Pollution Data Cleaning in R
 
 <small><strong>R data-quality project.</strong> Cleans and summarizes 18,980 air-monitoring records from seven Chinese cities, including missing-data checks and PM2.5 analysis.</small>
 
-[Open the project](r/pollution-analysis/)
+[View the project page — cleaning steps, dataset, R script, and analysis](r/pollution-analysis/)
 
 ### 6. Colon Cancer Classification
 
@@ -46,7 +50,7 @@ The portfolio includes practical work in Python, R, SQL, machine learning, natur
 
 ![Colon cancer model comparison](python/colon-cancer-classification/model-comparison.png)
 
-[Open the project](python/colon-cancer-classification/)
+[View the project page — classification workflow, evaluation charts, and notebook](python/colon-cancer-classification/)
 
 ### 7. Library Database Schema
 
@@ -54,9 +58,9 @@ The portfolio includes practical work in Python, R, SQL, machine learning, natur
 
 ![Library schema and table relationships](sql/library-schema-preview.png)
 
-[Open the SQL schema](sql/)
+[View the SQL page — schema file, relationship diagram, and usage notes](sql/)
 
 ## Supporting material
 
-- [Machine-learning course report](reports/machine-learning-course-report.pdf)
-- [Project screenshots](screenshots/)
+- [Read the machine-learning course report — detailed methodology and results](reports/machine-learning-course-report.pdf)
+- [Browse project screenshots — visual previews of the analyses](screenshots/)
