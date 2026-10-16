@@ -1,6 +1,10 @@
-# Portfolio Visuals
+# Project Screenshots and Charts
 
-These images show results from projects in this portfolio. Each caption explains what to look for.
+Visual examples from the portfolio projects. Each caption says what the image shows; open a project page for its methods, results, and limitations.
+
+## Financial news sentiment (NLP)
+
+This is the main NLP project. The [project page](../python/financial-sentiment-analysis/README.md) explains the dataset and model comparisons and links to the [notebook](../python/financial-sentiment-analysis/financial-sentiment-analysis.ipynb) and [dataset](../python/financial-sentiment-analysis/financial-news-sentiment.csv).
 
 ## Country development clustering
 
@@ -20,5 +24,3 @@ These images show results from projects in this portfolio. Each caption explains
 ## SQL database design
 
 - [Library database schema](library-database-schema.png) — maps the library tables and their key relationships.
-
-The financial sentiment project includes its CSV dataset and notebook. Its project page explains the analysis and how to run it.
