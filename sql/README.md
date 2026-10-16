@@ -4,7 +4,7 @@
 
 This is an introductory PostgreSQL database-design exercise with ten tables for books, physical copies, members, borrowings, and related records.
 
-![Library tables and relationships](library-schema-preview.png)
+![Library tables and relationships](../screenshots/library-database-schema.png)
 
 ## How the tables fit together
 
