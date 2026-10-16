@@ -44,14 +44,6 @@ Each project link opens a short project page with the objective, data, methods, 
 
 [View the project page — cleaning steps, dataset, R script, and analysis](r/pollution-analysis/)
 
-### 6. Colon Cancer Classification
-
-<small><strong>Educational classification project.</strong> Applies logistic regression, preprocessing, ROC/AUC evaluation, coefficient interpretation, and feature selection to gene-expression data.</small>
-
-![Colon cancer model comparison](python/colon-cancer-classification/model-comparison.png)
-
-[View the project page — classification workflow, evaluation charts, and notebook](python/colon-cancer-classification/)
-
 ## Supporting material
 
 - [Read the machine-learning course report — detailed methodology and results](reports/machine-learning-course-report.pdf)
