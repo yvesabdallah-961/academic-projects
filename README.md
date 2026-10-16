@@ -2,7 +2,7 @@
 
 Selected coursework projects from my dual-major studies in Big Data, AI, and Management at Centrale Nantes and Audencia Business School.
 
-[LinkedIn](https://www.linkedin.com/in/yves-abdallah/) ·
+[LinkedIn](https://www.linkedin.com/in/yves-abdallah/) 
 
 The projects show practical work with Python, R, SQL, machine learning, natural language processing, clustering, dimensionality reduction, and data cleaning.
 
