@@ -4,11 +4,11 @@ These are selected projects I completed while studying Big Data, AI, and Managem
 
 [LinkedIn](https://www.linkedin.com/in/yves-abdallah/) · [GitHub profile](https://github.com/yvesabdallah-961)
 
-They show how I work with Python, R, machine learning, natural language processing, clustering, dimensionality reduction, and data cleaning.
+They show how I work with Python, R, SQL, machine learning, natural language processing, clustering, dimensionality reduction, and data cleaning.
 
 ## How to read this portfolio
 
-Each link opens a short project page that explains the question, the data, what I did, the main result, and the limits of the work. The folder also contains the notebook, script, dataset, or charts.
+Each link opens a short project page that explains what I worked on, the data and methods, the main result or output, and the limits of the work. Project folders contain the notebooks, scripts, datasets, SQL schema, or charts.
 
 ## Projects
 
@@ -45,6 +45,14 @@ Each link opens a short project page that explains the question, the data, what 
 <small><strong>R data-quality project.</strong> I cleaned and summarized 18,980 air-monitoring records from seven Chinese cities, including missing-value checks and PM2.5 analysis.</small>
 
 [View the project page — cleaning steps, dataset, R script, and analysis](r/pollution-analysis/)
+
+### 6. Library Database Design
+
+<small><strong>Introductory SQL exercise.</strong> I designed a PostgreSQL schema with ten related tables for a library, including books, copies, members, and borrowings. This small sample does not include data or analysis queries.</small>
+
+![Library database table relationships](screenshots/library-database-schema.png)
+
+[View the SQL project page — schema diagram, SQL file, and setup notes](sql/)
 
 ## Supporting material
 
