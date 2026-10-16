@@ -2,6 +2,8 @@
 
 These are selected projects I completed while studying Big Data, AI, and Management at Centrale Nantes and Audencia Business School.
 
+[LinkedIn](https://www.linkedin.com/in/yves-abdallah/) · [GitHub profile](https://github.com/yvesabdallah-961)
+
 They show how I work with Python, R, machine learning, natural language processing, clustering, dimensionality reduction, and data cleaning.
 
 ## How to read this portfolio
