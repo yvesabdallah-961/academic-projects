@@ -1,25 +1,19 @@
-# Machine Learning Model Comparison Lab
+# Machine Learning Comparison Lab
 
-A substantial supervised-learning lab covering both regression and classification on reproducible synthetic datasets.
+A university coursework exercise using generated datasets to practice regression and classification methods.
 
-## What it demonstrates
+## Topics covered
 
 - Train/test splitting and feature scaling
-- Linear Regression with RMSE, MAE, and R²
-- Ridge and Lasso regularization with GridSearchCV
-- Logistic Regression, confusion matrices, ROC/AUC, and threshold tuning
-- Random Forest and XGBoost classification
-- Hyperparameter search with RandomizedSearchCV
-- Model comparison and discussion of interpretability versus performance
+- Linear, Ridge, and Lasso regression
+- Logistic Regression, Random Forest, and XGBoost
+- Confusion matrices, ROC/AUC, and threshold selection
+- Cross-validation and parameter search
 
-## Difficulty
+## Scope and limitations
 
-Advanced student coursework. The main challenge is keeping evaluation fair across several model families and understanding how regularization, decision thresholds, and boosting change the results.
-
-## Data and limits
-
-The notebook creates synthetic datasets with fixed random seeds so the workflow is reproducible without distributing a third-party dataset. Because the data is synthetic, the results demonstrate methods rather than real-world predictive performance.
+The data is synthetic, so the exercise demonstrates methods rather than real-world predictive performance. The notebook has no saved execution outputs. It also uses the test split to choose a classification threshold, which makes that result optimistic; the lab should not be read as a clean benchmark.
 
 ## Run it
 
-Open `model-comparison-lab.ipynb` in Google Colab or Jupyter and run from top to bottom. XGBoost, scikit-learn, pandas, and matplotlib are required.
+Open model-comparison-lab.ipynb in Google Colab or Jupyter and run the cells from top to bottom. It installs XGBoost in the first setup cell; scikit-learn, pandas, numpy, seaborn, and matplotlib are also used.
